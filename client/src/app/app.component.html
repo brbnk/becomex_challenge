@@ -1,0 +1,100 @@
+<main>
+  <mat-toolbar class="header">
+    <span> BECOME<span class="contrast">X</span> Challenge</span>
+  </mat-toolbar>
+
+  <div class="layout">
+    <div class="search-box">
+      <form>
+        <mat-form-field class="select-form-field">
+          <mat-label> Pesquisar por: </mat-label>
+          <mat-select [(ngModel)]="selectedOption" name="option">
+            <mat-option *ngFor="let option of options" [value]="option.value">
+              {{ option.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="input-form-field">
+          <mat-label>Clearable input</mat-label>
+          <input matInput placeholder="Keyword" [(ngModel)]="search" name="search">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="getCountries()">Buscar</button>
+      </form>
+    </div>
+
+    <div class="content">
+      <div style="overflow-y: scroll; padding: 0 5px; max-height: 73vh;">
+        <mat-accordion>
+          <mat-expansion-panel
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+            *ngFor="let country of countries"
+          >
+            <mat-expansion-panel-header class="panel-header">
+              <mat-panel-title style="flex: none">
+                <div class="panel-title">
+                  <img [src]="country.flag">
+                  <span> {{ country.name }} </span>
+                </div>
+              </mat-panel-title>
+              <mat-panel-description style="flex-grow: none; margin-right: 0; width: 100%;">
+                <div class="panel-description">
+                  <span>
+                    <b> Sigla:  </b>
+                    <span> {{ country.alpha3Code }} </span>
+                  </span>
+                  <span>
+                    <b> Moedas:  </b>
+                    <span> {{ convertCurrencyToString(country.currencies) }} </span>
+                  </span>
+                  <span>
+                    <b> Blocos Econômicos:  </b>
+                    <span class="no-overflow"> {{ convertRegionalBlocsToString(country.regionalBlocs) }} </span>
+                  </span>
+                </div>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div class="details">
+              <p> <b> População: </b> <span> {{ country.population }} </span> </p>
+              <p> <b> Timezones: </b> <span> {{ country.timezones.join(", ") }} </span> </p>
+              <p> <b> Línguas: </b> <span> {{ convertLanguagesToString(country.languages) }} </span> </p>
+              <p> <b> Capital: </b> <span> {{ country.capital }} </span> </p>
+              <p> <b> Blocos Econômicos: </b> <span> {{ convertRegionalBlocsToString(country.regionalBlocs) }} </span> </p>
+              <p> <b> Borders: </b> <span> {{ country.borders.join(", ") }} </span> </p>
+            </div>
+            <mat-action-row>
+              <button mat-button color="primary" (click)="select(country)">Select</button>
+            </mat-action-row>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+      <div class="routes">
+        <h2 style="display: flex; align-items: center;" *ngIf="!route.from"> Verificar Rotas </h2>
+        <div class="countries" *ngIf="route.from">
+          <img *ngIf="route.from" [src]="route.from.flag">
+          <mat-icon *ngIf="route.from" aria-hidden="false" aria-label="Example home icon">local_shipping</mat-icon>
+          <img *ngIf="route.to" [src]="route.to.flag">
+          <button mat-raised-button *ngIf="route.to" color="primary" (click)="getRoute()">Rota</button>
+          <button mat-button *ngIf="route.to" (click)="clearCoutries()">Limpar</button>
+        </div>
+        <div>
+          <h3 *ngIf="routeOrder.length > 0"> Rotas </h3>
+          <ul *ngIf="routeOrder.length > 0">
+            <li *ngFor="let item of routeOrder">
+              <img [src]="item.country.flag" style="width: 20px; height: 16px;">
+               - {{ item.order }} - {{ item.country.name }} - {{ item.country.alpha3Code }}
+            </li>
+          </ul>
+          <p style="display: flex; align-items: center; height: 100%; text-align: center;" *ngIf="routeOrder.length == 0">
+            Pesquise e selecione dois paíse para realizar o cálculo da rota
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <mat-toolbar color="fill" class="footer">
+  </mat-toolbar>
+</main>

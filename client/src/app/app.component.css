@@ -1,0 +1,109 @@
+main {
+  height: 100%;
+  display: grid;
+  grid-template-rows: .8fr 9fr .9fr;
+}
+
+.header {
+  background: #141227;
+  color: white;
+}
+
+.mat-raised-button {
+  background: #77ac4f;
+}
+
+.select-form-field {
+  width: 120px;
+}
+
+.input-form-field {
+  margin: 0 10px;
+}
+
+.contrast {
+  color: #77ac4f;
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-gap: 5px;
+  padding: 10px 20px 10px 20px;
+}
+
+.layout .search-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  border-bottom: 1px dashed lightgrey;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 10px;
+}
+
+.panel-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 150px;
+  margin: 0;
+}
+
+.panel-title img {
+  width: 20px;
+  height: 16px;
+}
+
+.panel-header span, b {
+  font-size: 14px;
+  margin-top: 1px;
+}
+
+.panel-header .mat-content {
+  flex: none !important;
+}
+
+.panel-description  {
+  display: grid;
+  grid-template-columns: 1fr 3fr 6fr;
+  grid-gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.routes {
+  display: grid;
+  grid-template-rows: .2fr .8fr;
+  grid-gap: 10px;
+  padding: 5px;
+}
+
+.routes .countries {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.routes .countries img {
+  width: 60px;
+  height: 40px;
+}
+
+.no-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 200px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  background: lightgrey;
+}

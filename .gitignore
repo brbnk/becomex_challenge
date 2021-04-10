@@ -1,0 +1,10 @@
+server/BecomexChallenge.API/bin
+server/BecomexChallenge.API/obj
+
+server/BecomexChallenge.Business/bin
+server/BecomexChallenge.Business/obj
+
+server/BecomexChallenge.Domain/bin
+server/BecomexChallenge.Domain/obj
+
+client/node_modules

@@ -1,3 +1,8 @@
+./.vs
+
+client/.vs/
+server/.vs/
+
 server/BecomexChallenge.API/bin
 server/BecomexChallenge.API/obj
 

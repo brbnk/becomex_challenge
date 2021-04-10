@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BecomexChallenge.Api", "BecomexChallenge.Api\BecomexChallenge.Api.csproj", "{B0BAFFB8-CE01-4621-9999-15C74C2EBAA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BecomexChallenge.Api", "BecomexChallenge.API\BecomexChallenge.Api.csproj", "{B0BAFFB8-CE01-4621-9999-15C74C2EBAA5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BecomexChallenge.Domain", "BecomexChallenge.Domain\BecomexChallenge.Domain.csproj", "{CA7E48E2-035F-42B8-BBF7-37F3FA7AB6ED}"
 EndProject

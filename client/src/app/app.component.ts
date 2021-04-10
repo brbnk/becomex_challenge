@@ -63,7 +63,7 @@ export class AppComponent {
   };
 
   constructor(private http : HttpClient) {
-    this.apiUrl = 'https://localhost:5001/api/countries'
+    this.apiUrl = 'http://localhost:5000/api/countries'
   }
 
   public title: string = 'client'

@@ -40,10 +40,9 @@ namespace BecomexChallenge.Api
             }
 
             app.UseCors(options =>
-                options.WithOrigins("http://localhost:4200")
+                options.AllowAnyOrigin()
                     .AllowAnyHeader()
-                    .AllowAnyMethod()
-                    .AllowCredentials());
+                    .AllowAnyMethod());
 
             app.UseMvc();
         }

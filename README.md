@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="https://flint-prodcms-forge.s3.amazonaws.com/prod/s3fs-public/2019-04/1200px-.net_core_logo.svg.png" width="200px">
+  <img src="https://flint-prodcms-forge.s3.amazonaws.com/prod/s3fs-public/2019-04/1200px-.net_core_logo.svg.png" width="100px">
   <span> &nbsp &nbsp &nbsp &nbsp</span>
   <img src="https://sigao.io/wp-content/uploads/2018/08/angular-card.png" width="200px"> 
   <span> &nbsp &nbsp &nbsp &nbsp</span>
-  <img src="https://miro.medium.com/max/1200/0*100ZoqoM6WcCaw9c.png" width="70px">
+  <img src="https://miro.medium.com/max/1200/0*100ZoqoM6WcCaw9c.png" width="240px">
   <span> &nbsp &nbsp &nbsp &nbsp</span>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Docker_%28container_engine%29_logo.svg/1280px-Docker_%28container_engine%29_logo.svg.png" width="200px">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Docker_%28container_engine%29_logo.svg/1280px-Docker_%28container_engine%29_logo.svg.png" width="300px">
 </div>
 <br />
 
